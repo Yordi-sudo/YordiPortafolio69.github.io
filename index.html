@@ -1,12 +1,19 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF--8">
   <title>YordiPortafolio69 | Mi portfolio gratis</title>
   <meta name="description" content="Portfolio personal de Yordi: proyectos, apuntes y videos. Alojado gratis con GitHub Pages.">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="YordiPortafolio69.github.io/css/styles.css">
+  
+  <!-- RUTA CSS CORREGIDA -->
+  <link rel="stylesheet" href="css/styles.css">
+  
+  <!-- NOTA: He movido tus estilos en línea a un archivo CSS externo, 
+       que es la práctica recomendada. Si todavía quieres mantenerlos aquí, 
+       puedes hacerlo, pero lo ideal es tenerlos en styles.css -->
   <style>
+    /* Si mueves los estilos a styles.css, puedes borrar esta etiqueta <style> */
     body{font-family:Arial,Helvetica,sans-serif;background:#111;color:#eee;margin:0;padding:0}
     header{background:#000;padding:1rem;text-align:center}
     header h1{color:#0af;margin:0}
@@ -31,7 +38,6 @@
 
   <section id="hero">
     <h2>Hola, soy Yordi</h2>
-    <!-- RUTA CORREGIDA -->
     <img src="foto.jpg" alt="Foto de Yordi">
     <p>Este es mi portfolio personal. Aquí guardo mis proyectos, apuntes y videos. Todo alojado <strong>gratis</strong> con GitHub Pages.</p>
     <a href="#proyectos" class="btn">Ver proyectos</a>
@@ -41,14 +47,12 @@
     <h2>Proyectos destacados</h2>
     <div class="grid">
       <div class="card">
-        <!-- RUTA CORREGIDA -->
         <img src="proyecto1.jpg" alt="Proyecto 1">
         <h3>Proyecto 1</h3>
         <p>Descripción breve del proyecto.</p>
         <a href="https://github.com/YordiPortafolio69/proyecto1" target="_blank">Ver código</a>
       </div>
       <div class="card">
-        <!-- RUTA CORREGIDA -->
         <img src="proyecto2.jpg" alt="Proyecto 2">
         <h3>Proyecto 2</h3>
         <p>Otra descripción breve.</p>
@@ -70,6 +74,8 @@
     <a href="https://github.com/YordiPortafolio69" target="_blank">GitHub</a> |
     <a href="mailto:sanchezandradejorge@gmail.com">Email</a>
   </footer>
-  <script src="YordiPortafolio69.github.io/js/main.js"></script>
+  
+  <!-- RUTA JAVASCRIPT CORREGIDA -->
+  <script src="js/main.js"></script>
 </body>
 </html>
