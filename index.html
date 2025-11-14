@@ -1,81 +1,93 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF--8">
+  <meta charset="UTF-8">
   <title>YordiPortafolio69 | Mi portfolio gratis</title>
-  <meta name="description" content="Portfolio personal de Yordi: proyectos, apuntes y videos. Alojado gratis con GitHub Pages.">
+  <meta name="description" content="Portfolio personal de Yordi: proyectos, apuntes y videos.">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  <!-- RUTA CSS CORREGIDA -->
+
+  <!-- Google Fonts para un estilo más moderno -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- Enlace a tu hoja de estilos CSS -->
   <link rel="stylesheet" href="css/styles.css">
-  
-  <!-- NOTA: He movido tus estilos en línea a un archivo CSS externo, 
-       que es la práctica recomendada. Si todavía quieres mantenerlos aquí, 
-       puedes hacerlo, pero lo ideal es tenerlos en styles.css -->
-  <style>
-    /* Si mueves los estilos a styles.css, puedes borrar esta etiqueta <style> */
-    body{font-family:Arial,Helvetica,sans-serif;background:#111;color:#eee;margin:0;padding:0}
-    header{background:#000;padding:1rem;text-align:center}
-    header h1{color:#0af;margin:0}
-    nav a{color:#0af;margin:0 .5rem;text-decoration:none}
-    section{padding:2rem;max-width:800px;margin:auto}
-    .grid{display:grid;gap:1.5rem;grid-template-columns:repeat(auto-fit,minmax(250px,1fr))}
-    .card{background:#1c1c1c;border-radius:8px;padding:1rem;text-align:center}
-    .card img{width:100%;border-radius:8px}
-    footer{background:#000;text-align:center;padding:1rem;font-size:.9rem}
-    .btn{background:#0af;color:#000;padding:.75rem 1.5rem;border-radius:8px;text-decoration:none;display:inline-block;margin-top:1rem}
-  </style>
 </head>
 <body>
+
   <header>
-    <h1>YordiPortafolio69</h1>
+    <a href="#" class="logo">YordiPortafolio69</a>
     <nav>
-      <a href="#proyectos">Proyectos</a>
-      <a href="#videos">Videos</a>
-      <a href="#contacto">Contacto</a>
+      <!-- El botón para el menú móvil que controla el JavaScript -->
+      <button id="menu-toggle" aria-label="Abrir menú">☰</button>
+      <!-- La lista de enlaces que el JavaScript muestra y oculta -->
+      <ul id="nav-links">
+        <li><a href="#proyectos">Proyectos</a></li>
+        <li><a href="#videos">Videos</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
     </nav>
   </header>
 
-  <section id="hero">
-    <h2>Hola, soy Yordi</h2>
-    <img src="foto.jpg" alt="Foto de Yordi">
-    <p>Este es mi portfolio personal. Aquí guardo mis proyectos, apuntes y videos. Todo alojado <strong>gratis</strong> con GitHub Pages.</p>
-    <a href="#proyectos" class="btn">Ver proyectos</a>
-  </section>
+  <main>
+    <section id="hero">
+      <h1>Hola, soy Yordi</h1>
+      <p>Este es mi portfolio personal. Aquí guardo mis proyectos, apuntes y videos. Todo alojado <strong>gratis</strong> con GitHub Pages.</p>
+      <a href="#proyectos" class="btn">Ver proyectos</a>
+    </section>
 
-  <section id="proyectos">
-    <h2>Proyectos destacados</h2>
-    <div class="grid">
-      <div class="card">
-        <img src="proyecto1.jpg" alt="Proyecto 1">
-        <h3>Proyecto 1</h3>
-        <p>Descripción breve del proyecto.</p>
-        <a href="https://github.com/YordiPortafolio69/proyecto1" target="_blank">Ver código</a>
+    <section id="proyectos">
+      <h2>Proyectos destacados</h2>
+      <div class="grid">
+        <div class="card">
+          <img src="proyecto1.jpg" alt="Proyecto 1">
+          <h3>Proyecto 1</h3>
+          <p>Descripción breve del proyecto.</p>
+          <a href="#" target="_blank">Ver código</a>
+        </div>
+        <div class="card">
+          <img src="proyecto2.jpg" alt="Proyecto 2">
+          <h3>Proyecto 2</h3>
+          <p>Otra descripción breve.</p>
+          <a href="#" target="_blank">Ver código</a>
+        </div>
+        <!-- Puedes añadir más tarjetas de proyectos aquí -->
       </div>
-      <div class="card">
-        <img src="proyecto2.jpg" alt="Proyecto 2">
-        <h3>Proyecto 2</h3>
-        <p>Otra descripción breve.</p>
-        <a href="https://github.com/YordiPortafolio69/proyecto2" target="_blank">Ver código</a>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <section id="videos">
-    <h2>Videos tutoriales</h2>
-    <div style="text-align:center">
-      <!-- Cambia ABC123XYZ por tu ID de YouTube -->
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/ABC123XYZ" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
-    </div>
-  </section>
+    <section id="videos">
+      <h2>Videos</h2>
+      <div class="video-grid">
+        <!-- 
+          AJUSTE IMPORTANTE: 
+          Ahora usamos "data-id" para que coincida con tu JavaScript (div.dataset.id).
+          Cambia "ABC123XYZ" por el ID de tu video de YouTube.
+        -->
+        <div class="yt" data-id="ABC123XYZ">
+          <img src="https://img.youtube.com/vi/ABC123XYZ/hqdefault.jpg" alt="Miniatura del video 1">
+        </div>
+        
+        <!-- 
+          Ejemplo de otro video. Cambia "DEF456GHI" por el ID de otro video.
+        -->
+        <div class="yt" data-id="DEF456GHI">
+          <img src="https://img.youtube.com/vi/DEF456GHI/hqdefault.jpg" alt="Miniatura del video 2">
+        </div>
+      </div>
+    </section>
+  </main>
 
   <footer id="contacto">
     <p>Contacto:</p>
     <a href="https://github.com/YordiPortafolio69" target="_blank">GitHub</a> |
     <a href="mailto:sanchezandradejorge@gmail.com">Email</a>
   </footer>
-  
-  <!-- RUTA JAVASCRIPT CORREGIDA -->
+
+  <!-- El botón para volver arriba que controla el JavaScript -->
+  <button id="topBtn" title="Ir arriba">↑</button>
+
+  <!-- Enlace a tu script de JavaScript -->
   <script src="js/main.js"></script>
 </body>
 </html>
