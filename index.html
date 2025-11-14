@@ -19,9 +19,7 @@
   <header>
     <a href="#" class="logo">YordiPortafolio69</a>
     <nav>
-      <!-- El botón para el menú móvil que controla el JavaScript -->
       <button id="menu-toggle" aria-label="Abrir menú">☰</button>
-      <!-- La lista de enlaces que el JavaScript muestra y oculta -->
       <ul id="nav-links">
         <li><a href="#proyectos">Proyectos</a></li>
         <li><a href="#videos">Videos</a></li>
@@ -37,40 +35,45 @@
       <a href="#proyectos" class="btn">Ver proyectos</a>
     </section>
 
+    <!-- ===== SECCIÓN DE PROYECTOS MODIFICADA COMO CARRUSEL ===== -->
     <section id="proyectos">
       <h2>Proyectos destacados</h2>
-      <div class="grid">
-        <div class="card">
-          <img src="proyecto1.jpg" alt="Proyecto 1">
-          <h3>Proyecto 1</h3>
-          <p>Descripción breve del proyecto.</p>
-          <a href="#" target="_blank">Ver código</a>
+      <div class="carousel-container">
+        <div class="carousel-track">
+          <!-- Slide 1 -->
+          <div class="card carousel-slide">
+            <img src="proyecto1.jpg" alt="Proyecto 1">
+            <h3>Proyecto 1</h3>
+            <p>Descripción breve del proyecto.</p>
+            <a href="#" target="_blank">Ver código</a>
+          </div>
+          <!-- Slide 2 -->
+          <div class="card carousel-slide">
+            <img src="proyecto2.jpg" alt="Proyecto 2">
+            <h3>Proyecto 2</h3>
+            <p>Otra descripción breve.</p>
+            <a href="#" target="_blank">Ver código</a>
+          </div>
+          <!-- Slide 3 (Puedes añadir más) -->
+          <div class="card carousel-slide">
+            <!-- Si tienes imagen: <img src="proyecto3.jpg" alt="Proyecto 3"> -->
+            <h3>Proyecto 3</h3>
+            <p>Descripción del tercer proyecto.</p>
+            <a href="#" target="_blank">Ver código</a>
+          </div>
         </div>
-        <div class="card">
-          <img src="proyecto2.jpg" alt="Proyecto 2">
-          <h3>Proyecto 2</h3>
-          <p>Otra descripción breve.</p>
-          <a href="#" target="_blank">Ver código</a>
-        </div>
-        <!-- Puedes añadir más tarjetas de proyectos aquí -->
+        <button class="carousel-button prev-button">‹</button>
+        <button class="carousel-button next-button">›</button>
       </div>
     </section>
+    <!-- ===== FIN DE LA SECCIÓN DE PROYECTOS ===== -->
 
     <section id="videos">
       <h2>Videos</h2>
       <div class="video-grid">
-        <!-- 
-          AJUSTE IMPORTANTE: 
-          Ahora usamos "data-id" para que coincida con tu JavaScript (div.dataset.id).
-          Cambia "ABC123XYZ" por el ID de tu video de YouTube.
-        -->
         <div class="yt" data-id="ABC123XYZ">
           <img src="https://img.youtube.com/vi/ABC123XYZ/hqdefault.jpg" alt="Miniatura del video 1">
         </div>
-        
-        <!-- 
-          Ejemplo de otro video. Cambia "DEF456GHI" por el ID de otro video.
-        -->
         <div class="yt" data-id="DEF456GHI">
           <img src="https://img.youtube.com/vi/DEF456GHI/hqdefault.jpg" alt="Miniatura del video 2">
         </div>
@@ -84,10 +87,8 @@
     <a href="mailto:sanchezandradejorge@gmail.com">Email</a>
   </footer>
 
-  <!-- El botón para volver arriba que controla el JavaScript -->
   <button id="topBtn" title="Ir arriba">↑</button>
 
-  <!-- Enlace a tu script de JavaScript -->
   <script src="js/main.js"></script>
 </body>
 </html>
